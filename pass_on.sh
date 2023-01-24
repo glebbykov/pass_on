@@ -9,7 +9,7 @@ sudo sed -i 's/.*PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/
 echo "Please enter the password for the current user:"
 read -s user_password
 
-echo $user_password | sudo passwd --stdin $(whoami)
+echo $user_password | sudo passwd $(whoami)
 
 # Determine the system type
 if [ -f /etc/lsb-release ]; then
