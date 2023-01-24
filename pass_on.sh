@@ -13,8 +13,13 @@ echo $user_password | sudo passwd --stdin $(whoami)
 
 # Determine the system type
 if [ -f /etc/lsb-release ]; then
-    # Debian/Ubuntu Linux user run
+    # Ubuntu Linux user run
     sudo systemctl reload ssh.service
+
+elif [ -f /etc/os-release ]; then
+    # Debian Linux user run
+    sudo systemctl reload ssh.service
+
 elif [ -f /etc/redhat-release ]; then
     # RHEL/CentOS Linux user run
     sudo systemctl reload sshd.service
