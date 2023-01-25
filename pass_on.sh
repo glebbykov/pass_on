@@ -9,7 +9,7 @@ sudo sed -i 's/.*PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/
 echo "Please enter the password for the current user:"
 read -s user_password
 
-echo $user_password | sudo passwd $(whoami)
+echo $user_password | sudo passwd --stdin $(whoami)
 
 # Identify the Linux platform
 platform=$(cat /etc/*-release | grep -E '^ID=' | cut -d '=' -f 2 | tr -d '"')
