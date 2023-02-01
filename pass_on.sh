@@ -7,6 +7,7 @@ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 sudo sed -i 's/.*PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
 
 echo "Please enter the password for the current user:"
+
 read -s user_password
 
 echo $user_password | sudo passwd --stdin $(whoami)
