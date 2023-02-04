@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Script to enable password authentication and set user password
 
 sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
