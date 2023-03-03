@@ -5,10 +5,10 @@ A simple bash script to enable password authentication and set user password on 
 ## Usage
 
 1. Download the script and make it executable:
-
+```
 curl https://raw.githubusercontent.com/username/repository/master/ssh-password-auth.sh -o ssh-password-auth.sh
 chmod +x ssh-password-auth.sh
-
+```
 2. Run the script:
 sudo ./ssh-password-auth.sh
 
