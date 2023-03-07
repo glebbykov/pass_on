@@ -6,7 +6,8 @@ A simple bash script to enable password authentication and set user password on 
 
 1. Download the script and make it executable:
 ```
-git clone 
+git clone https://github.com/glebbykov/pass_on.git
+cd pass_on
 chmod +x ssh-password-auth.sh
 ```
 2. Run the script:
